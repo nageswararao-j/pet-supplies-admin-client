@@ -1,0 +1,72 @@
+<ng-include src="'/views/header.html'" />
+<div ng-controller="PopupsController">
+	<button ng-click="openCreateProduct();" class="btn btn-warning">Create
+		Product</button>
+</div>
+
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Product ID</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Product Name</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Price</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Currency</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Status</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Category Code</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Description</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Quantity</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Seller Id</div>
+				<div class="fht-cell"></div>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="product in allProducts">
+			<td class="text-left" style="">{{product.productId}}</td>
+			<td class="text-left" style="">{{product.productName}}</td>
+			<td class="text-left" style="">{{product.price}}</td>
+			<td class="text-left" style="">{{product.currency}}</td>
+			<td class="text-left" style="">{{product.status}}</td>
+			<td class="text-left" style="">{{product.categoryCode}}</td>
+			<td class="text-left" style="">{{product.desc}}</td>
+			<td class="text-left" style="">{{product.quantity}}</td>
+			<td class="text-left" style="">{{product.sellerId}}</td>
+			<td class="text-left" style=""><div
+					ng-controller="PopupsController">
+					<button ng-click="openUpdateProduct(product);"
+						class="btn btn-success">Edit Product</button>
+				</div></td>
+			<td class="text-left" style="">
+				<button ng-click="deleteProduct(product);" class="btn btn-success">Delete
+					Product</button>
+			</td>
+
+		</tr>
+	</tbody>
+	<tfoot></tfoot>
+</table>

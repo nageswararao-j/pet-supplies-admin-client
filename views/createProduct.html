@@ -1,0 +1,105 @@
+<br />
+<div class="container">
+	<div class="col-md-6">
+		<div class="panel-body">
+			<h4 style="color: #7EB59E; margin: initial; margin-bottom: 10px;">Add
+				new Product</h4>
+			<div class="panel-body">
+				<form accept-charset="UTF-8" role="form">
+					<fieldset>
+						<div class="form-group">
+							<div class="col-md-12">
+								<strong>Product Name:</strong>
+							</div>
+							<div class="col-md-12">
+								<input type="text" ng-model="productName" name="productName"
+									class="form-control" value="" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<strong>Description:</strong>
+							</div>
+							<div class="col-md-12">
+								<input type="text" ng-model="desc" name="desc"
+									class="form-control" value="" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<strong>Price</strong>
+							</div>
+							<div class="col-md-5">
+								<input type="text" ng-model="price" name="price"
+									class="form-control" value="" />
+							</div>
+							<div class="col-md-4">
+								<select id="currency" ng-model="currency" name="currency" class="form-control">
+									<option value="EUR">EUR</option>
+									<option value="INR">INR</option>
+									<option value="JPY">JPY</option>
+									<option value="USD">USD</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<strong>Status</strong>
+							</div>
+							<div class="col-md-4">
+								<select id="selectbasic" ng-model="statusVal"  name="statusVal" class="form-control">
+									<option value="In stock">In stock</option>
+									<option value="Out off stock">Out off stock</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<strong>Quantity</strong>
+							</div>
+							<div class="col-md-12">
+								<input type="text" ng-model="quantity" name="quantity"
+									class="form-control" value="" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<strong>Category</strong>
+							</div>
+							<div class="col-md-4">
+								<select id="category" ng-model="category" name="category" class="form-control">
+									<option value="CAT">CAT</option>
+									<option value="DOG">DOG</option>
+									<option value="BIRDS">BIRDS</option>
+									<option value="RABBIT">RABBIT</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<strong>Image Name</strong>
+							</div>
+							<div class="col-md-12">
+								<input type="text" ng-model="imageName" name="imageName"
+									class="form-control" value="" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<strong>URL:</strong>
+							</div>
+							<div class="col-md-12">
+								<input type="text" ng-model="imageUrl" class="form-control"
+									name="country" value="" />
+							</div>
+						</div>
+						<br /> <input class="btn btn-lg btn-success btn-block"
+							type="submit" value="Add Product" ng-click="addProduct();">
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>
