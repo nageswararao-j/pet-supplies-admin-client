@@ -1,1 +1,38 @@
-<ng-include src="'views/header.html'" />22222222222222
+<ng-include src="'/views/header.html'" />
+<div ></div>
+
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Image ID</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">Image Name</div>
+				<div class="fht-cell"></div>
+			</th>
+			<th class="text-left" style="">
+				<div class="th-inner sortable">URL</div>
+				<div class="fht-cell"></div>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="image in allImages">
+			<td class="text-left" style="">{{image.name}}</td>
+			<td class="text-left" style="">{{image.url}}</td>
+			<td class="text-left" style=""><div
+					ng-controller="PopupsController">
+					<button ng-click="openUpdateImage(image);"
+						class="btn btn-success">Edit Image</button>
+				</div></td>
+			<td class="text-left" style="">
+				<button ng-click="deleteImage(image);" class="btn btn-success">Delete
+					Image</button>
+			</td>
+
+		</tr>
+	</tbody>
+	<tfoot></tfoot>
+</table>

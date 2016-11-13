@@ -38,4 +38,9 @@ app.controller('ProductMgtController', [ '$scope', '$location', 'Session','MENUS
 					console.log('Deleted product successfully!');
 				});
 			};
+			$scope.updateProduct = function(product){
+				ProductMgtService.updateProduct(product).then(function() {
+					console.log('Updated product successfully!');
+				});
+			};
 		} ]);

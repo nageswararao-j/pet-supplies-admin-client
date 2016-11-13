@@ -7,12 +7,28 @@ app.factory('ProductMgtService', [
 			var saveProduct = function(product) {
 				return $http.post($rootScope.baseUrl + '/product/save/',
 						product).success(function(res) {
-					console.log("Saved Cart Item successfully!");
+					console.log("Saved product successfully!");
 				}).error(function(error) {
-					console.log("Error while saving Cart Item");
+					console.log("Error while saving product");
 				});
 			};
 
+			var updateUser = function(u) {
+				return $http({
+						url : $rootScope.baseUrl+'/user/update/',
+						dataType : 'json',
+						method : 'POST',
+						data : order,
+						headers : {
+							'Content-Type' : 'application/json'
+						}})
+						.success(function(res) {
+							console.log("Loaded user successfully!");
+						}).error(function(error) {
+							console.log("Error while loading user !");
+						});
+			};
+			
 			var deleteProduct = function(product) {
 				return $http(
 						{
@@ -25,7 +41,7 @@ app.factory('ProductMgtService', [
 							}
 						}).success(function(res) {
 					if (res.status == 200) {
-						console.log("Deleted Cart Item successfully!");
+						console.log("Deleted product successfully!");
 					}
 				}).error(function(error) {
 					console.log("Error while Deleting products !");
@@ -53,6 +69,7 @@ app.factory('ProductMgtService', [
 			return {
 				saveProduct : saveProduct,
 				loadAllProducts : loadAllProducts,
-				deleteProduct : deleteProduct
+				deleteProduct : deleteProduct,
+				updateUser : updateUser
 			};
 		} ]);
