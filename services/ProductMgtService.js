@@ -13,19 +13,19 @@ app.factory('ProductMgtService', [
 				});
 			};
 
-			var updateUser = function(u) {
+			var updateProduct = function(product) {
 				return $http({
-						url : $rootScope.baseUrl+'/user/update/',
+						url : $rootScope.baseUrl+'/product/update/',
 						dataType : 'json',
 						method : 'POST',
-						data : order,
+						data : product,
 						headers : {
 							'Content-Type' : 'application/json'
 						}})
 						.success(function(res) {
-							console.log("Loaded user successfully!");
+							console.log("Updated product successfully!");
 						}).error(function(error) {
-							console.log("Error while loading user !");
+							console.log("Error while updating product !");
 						});
 			};
 			
@@ -70,6 +70,6 @@ app.factory('ProductMgtService', [
 				saveProduct : saveProduct,
 				loadAllProducts : loadAllProducts,
 				deleteProduct : deleteProduct,
-				updateUser : updateUser
+				updateProduct : updateProduct
 			};
 		} ]);

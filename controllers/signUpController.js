@@ -51,4 +51,9 @@ app.controller('SignUpController', [ '$scope','$location','Session','AuthService
 	$scope.$on(AUTH_EVENTS.existingUser,function(event,data){
 		$scope.emailExists = data.errorMsg;
 	});
+	
+	$scope.signOut = function(){
+		Session.currentUser = null;
+		$location.path("/login");
+	};
 } ]);

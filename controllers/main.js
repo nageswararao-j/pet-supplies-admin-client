@@ -10,7 +10,6 @@ app.controller('MainCtrl', [
 			$scope.currentUser = null;
 			$scope.name = Session.currentUser.name;
 			$scope.load = function(mgType){
-//				$scope.managementCatagory = MENUS(mgType);	
 				$location.path(MENUS(mgType));	
 			};
 			

@@ -34,9 +34,9 @@ app.factory('UserMgtService', [
 							'Content-Type' : 'application/json'
 						}})
 						.success(function(res) {
-							console.log("Loaded user successfully!");
+							console.log("Updated user successfully!");
 						}).error(function(error) {
-							console.log("Error while loading user !");
+							console.log("Error while updating user !");
 						});
 			};
 			

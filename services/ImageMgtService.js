@@ -34,9 +34,9 @@ app.factory('ImageMgtService', [
 							'Content-Type' : 'application/json'
 						}})
 						.success(function(res) {
-							console.log("Loaded image successfully!");
+							console.log("Updated image successfully!");
 						}).error(function(error) {
-							console.log("Error while loading image !");
+							console.log("Error updating image !");
 						});
 			};
 			

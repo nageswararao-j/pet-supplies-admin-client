@@ -8,7 +8,7 @@ app.directive('dynamicTemplate', function() {
 		controller : function($scope) {
 			$scope.getTemplateUrl = function() {
 				if($scope.catagory != undefined){
-					return "views/"+$scope.catagory+".html";
+					return "/pet-supplies-admin/views/"+$scope.catagory+".html";
 				}
 			}
 		}

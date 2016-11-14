@@ -23,5 +23,8 @@ app.controller('PictureMgtController', [ '$scope', '$location', 'Session','MENUS
 					console.log('Updated image successfully!');
 				});
 			};
-			
+			$scope.signOut = function(){
+				Session.currentUser = null;
+				$location.path("/login");
+			};
 		} ]);

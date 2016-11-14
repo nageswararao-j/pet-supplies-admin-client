@@ -24,4 +24,9 @@ app.controller('UserMgtController', [ '$scope', '$location', 'Session','MENUS','
 				});
 			};
 			
+			$scope.signOut = function(){
+				Session.currentUser = null;
+				$location.path("/login");
+			};
+			
 		} ]);

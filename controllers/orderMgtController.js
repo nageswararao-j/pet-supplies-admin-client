@@ -20,4 +20,8 @@ app.controller('OrderMgtController', [
 					$scope.orderedProducts = updatedOrder.data;
 				});
 			};
+			$scope.signOut = function(){
+				Session.currentUser = null;
+				$location.path("/login");
+			};
 		} ]);

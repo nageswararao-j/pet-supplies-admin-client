@@ -27,10 +27,7 @@ app.factory('AuthService',['$http','$rootScope','Session','USER_ROLES','AUTH_EVE
 	};
 	
 	authService.isAuthorized = function(authorizedRoles) {
-//		if (!angular.isArray(authorizedRoles)) {
-//			authorizedRoles = [ authorizedRoles ];
-//		}
-		return (authService.isAuthenticated())// && authorizedRoles.indexOf(Session.userRole) !== -1);
+		return (authService.isAuthenticated());
 	};
 
 	return authService;

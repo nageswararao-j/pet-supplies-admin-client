@@ -13,8 +13,10 @@ app.constant('USER_ROLES', {
 	admin : 'ADMIN'
 });
 app.constant('ENVIRONMENT', {
-	mode : 'dev',
-	baseUrl : 'http://localhost:8080'
+	mode : 'prod',
+	baseUrl : 'http://localhost:8080/pet-supplies-admin'
+	//mode : 'dev',
+	//baseUrl : 'http://localhost:8080'
 });
 app.constant('ERROR', {
 	EMAIL_EXISTS : 'Email Id already exists! Please login'

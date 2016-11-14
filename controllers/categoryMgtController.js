@@ -36,4 +36,8 @@ app.controller('CategoryMgtController', [ '$scope', '$location', 'Session','MENU
 					console.log('Updated Category successfully!');
 				});
 			};
+			$scope.signOut = function(){
+				Session.currentUser = null;
+				$location.path("/login");
+			};
 		} ]);

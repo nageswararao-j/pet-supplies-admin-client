@@ -43,4 +43,8 @@ app.controller('ProductMgtController', [ '$scope', '$location', 'Session','MENUS
 					console.log('Updated product successfully!');
 				});
 			};
+			$scope.signOut = function(){
+				Session.currentUser = null;
+				$location.path("/login");
+			};
 		} ]);

@@ -13,7 +13,7 @@ app.factory('OrderMgtService', [
 							'Content-Type' : 'application/json'
 						}})
 						.success(function(res) {
-							console.log("Loaded order successfully!");
+							console.log("Loaded orders successfully!");
 						}).error(function(error) {
 							console.log("Error while loading orders !");
 						});
@@ -31,7 +31,7 @@ app.factory('OrderMgtService', [
 						.success(function(res) {
 							console.log("Loaded order successfully!");
 						}).error(function(error) {
-							console.log("Error while loading orders !");
+							console.log("Error while updating order!");
 						});
 			};
 			

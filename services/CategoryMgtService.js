@@ -7,9 +7,9 @@ app.factory('CategoryMgtService', [
 			var saveCategory = function(category) {
 				return $http.post($rootScope.baseUrl + '/category/save/',
 						category).success(function(res) {
-					console.log("Saved Cart Item successfully!");
+					console.log("Saved category successfully!");
 				}).error(function(error) {
-					console.log("Error while saving Cart Item");
+					console.log("Error while saving category");
 				});
 			};
 
